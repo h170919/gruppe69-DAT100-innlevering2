@@ -1,5 +1,3 @@
-// TODO finn ut hva han mener med "utvided if løkke" (nested if loop ?) og skriv det i oppgave #( ? )
-
 public class O1 {
     public static void main(String[] args) {
         System.out.println("Oppgave a):\n");
@@ -68,6 +66,13 @@ public class O1 {
             total += tabell[i];
             i++;
         }
+        System.out.println(total);
+        System.out.println("\nTall i tabell summert vha. utvided for-løkke:");
+        total = 0;
+        for(int tall : tabell) {
+            
+            total += tall;
+        }
         return total;
     }
 
@@ -128,9 +133,6 @@ public class O1 {
     }
 
     public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-
-        
         
         int [] sammensattTabell = new int[tabell1.length + tabell2.length];
         int sammensattTabellIndex = 0;
@@ -160,9 +162,6 @@ public class O1 {
         formatedTabell = formatedTabell.substring(0, formatedTabell.length() - 2) + "]"; // Fjerner siste ", " fra enden av strengen
         System.out.println(formatedTabell);
         return sammensattTabell;
-
-
     }
-    
 }
 
