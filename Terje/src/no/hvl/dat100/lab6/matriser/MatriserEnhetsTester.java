@@ -80,9 +80,9 @@ class MatriserEnhetsTester {
 
 		int[][] c = { {84,90,96}, {201,216,231}, {318,342,366} };
 
-		//int[][] multiplisert = Matriser.multipliser(a,b);
+		int[][] multiplisert = Matriser.multipliser(a,b);
 		
-		//assertArrayEquals(c,multiplisert);
+		assertArrayEquals(c,multiplisert);
 		
 	}
 	
