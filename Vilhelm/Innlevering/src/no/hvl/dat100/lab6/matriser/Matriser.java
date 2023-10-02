@@ -2,17 +2,17 @@ package no.hvl.dat100.lab6.matriser;
 
 public class Matriser {
 
-	// a)
-	public static void skrivUt(int[][] matrise) {
+    // a)
+    public static void skrivUt(int[][] matrise) {
         for(int rad[] : matrise) {
             for(int tall : rad) {
                 System.out.print(tall);
             }
         }
-	}
+    }
 
-	// b)
-	public static String tilStreng(int[][] matrise) {
+    // b)
+    public static String tilStreng(int[][] matrise) {
         String formatertMatrise = "";
         for(int r = 0; r < matrise.length; r++) {
             for(int num = 0; num < matrise[r].length; num++) {
@@ -20,11 +20,11 @@ public class Matriser {
             }
             formatertMatrise += "\n";
         }
-        return formatertMatrise;		
-	}
+        return formatertMatrise;        
+    }
 
-	// c)
-	public static int[][] skaler(int tall, int[][] matrise) {
+    // c)
+    public static int[][] skaler(int tall, int[][] matrise) {
 
         int[][] nyMatrise = new int[matrise.length][matrise[0].length];
 
@@ -48,10 +48,10 @@ public class Matriser {
         }
         return nyMatrise;  
 
-	}
+    }
 
-	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
+    // d)
+    public static boolean erLik(int[][] a, int[][] b) {
         boolean lik = true;
 
         int radCounter = 0;
@@ -68,10 +68,11 @@ public class Matriser {
             radCounter += 1;
         }
         return lik;
-	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
+    }
+    
+    // e)
+    public static int[][] speile(int[][] matrise) {
+
         int[][] speiletMatrise = new int[matrise.length][matrise[0].length];
         for(int i = 0; i < matrise[0].length; i ++) {
             for(int j = 0; j < matrise[i].length; j++) {
@@ -80,12 +81,21 @@ public class Matriser {
         }
         return speiletMatrise;
     }
+    
 
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
+    // f)
+    public static int[][] multipliser(int[][] a, int[][] b) {
+        int[][] columnTotal = new int[a.length][b[0].length];
+        for (int k = 0; k < a.length; k++) {  // Itererer gjennom radene i matrise a
+            for (int i = 0; i < b[0].length; i++) {  // Itererer gjennom kolonnene i matrise b
+                for (int j = 0; j < a[k].length; j++) {  // Itererer gjennom elementene for multiplikasjon
+                    columnTotal[k][i] += a[k][j] * b[j][i];
+                }
+            }
+        }
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
-	}
+
+        return columnTotal;
+    }
 }
+
