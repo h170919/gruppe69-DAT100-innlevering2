@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Anton/ObligOppg2/src"/>
+	<classpathentry kind="src" path="Terje/src"/>
+	<classpathentry excluding="Innlevering/src/" kind="src" path="Vilhelm"/>
+	<classpathentry kind="src" path="Vilhelm/Innlevering/src"/>
+	<classpathentry kind="output" path="Anton/ObligOppg2/bin"/>
+</classpath>
